@@ -8,6 +8,10 @@ function adicionar() {
     let valorUnitario= produto.split('R$')[1];
     let quantidade = document.getElementById('quantidade').value;
 
+    if (quantidade <= 0){
+        alert('ERRO! A quantidade deve ser superior a zero!');
+        return;
+    }
 // Calcular o preço por produto
 
     let precoTotal = (quantidade * valorUnitario);
